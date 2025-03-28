@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header ul li {
+  @apply px-5;
+}
+
+.bg-primary {
+  background: rgb(65, 13, 63);
+}
+
+.bg-secondary {
+  background: rgb(112, 8, 112);
+}
+
+.mobile-nav {
+  @apply absolute top-0 left-0 bg-gray-800 w-full;
+  height: 100vh; 
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+  z-index: 10; 
+}
+
+.mobile-nav.open {
+  transform: translateY(0); 
+}
+
+.mobile-nav li {
+  @apply w-full text-center py-4 text-white;
+}
+
+.mobile-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none; 
+  }
+}
+
+.project-des{
+    @apply absolute left-0 right-0 bottom-0 top-0 bg-primary opacity-0 duration-500 hover:opacity-100 ;
+}
+
+.btn{
+    @apply bg-secondary px-5 py-2 font-bold hover:border-2 border-white rounded;
+}
+
+.nav {
+  @apply hover:border-b-4 hover:scale-95 border-white transform ease-in-out duration-150;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
